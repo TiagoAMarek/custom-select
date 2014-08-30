@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Select Personalizado</title>
+        <meta charset="utf-8">
+        <link href="css/default.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <span value="" class="select">Selecione um item</span>
+            <ul class="list">        
+                <li value="1" class="list-item">Item 1</li>
+                <li value="2" class="list-item">Item 2</li>
+                <li value="3" class="list-item">Item 3</li>
+                <li value="4" class="list-item">Item 4</li>    
+            </ul>            
+        </div>
+    </body>
+    <script src="js/custom-select.js"></script>
+    <script>
+    // Buscando os elementos do select
+    var itemsContainer = document.querySelector("ul");
+    var items = document.querySelectorAll("li");
+    var select = document.querySelector("span");
+    // Instânciando o objeto
+    var customSelect = new CustomSelect({
+        itemsContainer : itemsContainer, 
+        items : items,
+        select : select
+    });
+    // Inserindo um novo item
+    var item = document.createElement("li");
+    item.innerHTML = "Item 5";
+    item.setAttribute("value", "5");
+    item.className = "list-item";
+    customSelect.addItem(item);
+    </script>
+</html>

@@ -1,0 +1,23 @@
+.container {
+	background-color: #FA6900;
+	color: #fff;	
+	width: 250px;
+}
+.list {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.list-item:hover {
+	background-color: #FF8900;
+}
+.select {
+	display: block;
+	background-color: #DD5D00;
+}
+.list-item,
+.select {
+	cursor: pointer;
+	padding: 5px 0 5px 15px;	
+}
