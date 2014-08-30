@@ -20,7 +20,7 @@ Montar a estrutura do select
 </div>
 ```
 Buscar os elementos que irão compor o select e passar através de um Objeto nas configurações.
-```html
+```javascript
 // Buscando os elementos do select
 var itemsContainer = document.querySelector("ul");
 var items = document.querySelectorAll("li");
