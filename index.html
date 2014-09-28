@@ -1,1 +1,75 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Custom-select by brunomrpx</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Custom-select</h1>
+        <h2>Elementos &#39;selects&#39; personalizados</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/brunomrpx/custom-select/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/brunomrpx/custom-select/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/brunomrpx/custom-select" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="custom-select" class="anchor" href="#custom-select"><span class="octicon octicon-link"></span></a>Custom Select</h1>
+
+<p><em>Plugin para criação de elementos 'selects' personalizados</em></p>
+
+<h3>
+<a name="como-utilizar" class="anchor" href="#como-utilizar"><span class="octicon octicon-link"></span></a>Como utilizar</h3>
+
+<p>Adicionar o arquivo <code>custom-select.js</code> na página.</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/custom-select.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<p>Montar a estrutura do select</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">value=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>Selecione um item<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list"</span><span class="nt">&gt;</span>        
+        <span class="nt">&lt;li</span> <span class="na">value=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">value=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">value=</span><span class="s">"3"</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">value=</span><span class="s">"4"</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Item 4<span class="nt">&lt;/li&gt;</span>    
+    <span class="nt">&lt;/ul&gt;</span>            
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>Buscar os elementos que irão compor o select e passar através de um Objeto nas configurações.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="c1">// Buscando os elementos do select</span>
+<span class="kd">var</span> <span class="nx">itemsContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"ul"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">items</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">"li"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">select</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"span"</span><span class="p">);</span>
+<span class="c1">// Instânciando o objeto</span>
+<span class="kd">var</span> <span class="nx">customSelect</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CustomSelect</span><span class="p">({</span>
+    <span class="nx">itemsContainer</span> <span class="o">:</span> <span class="nx">itemsContainer</span><span class="p">,</span> 
+    <span class="nx">items</span> <span class="o">:</span> <span class="nx">items</span><span class="p">,</span>
+    <span class="nx">select</span> <span class="o">:</span> <span class="nx">select</span>
+<span class="p">});</span>
+</pre></div>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
